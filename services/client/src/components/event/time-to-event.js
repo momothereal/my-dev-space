@@ -32,13 +32,15 @@ const TimeToEvent = ({ startTime }) => {
         #when {
           color: #989fa5;
           font-style: italic;
+          font-weight: 200;
         }
         #date{
           color: rgba(60, 0, 30, 0.5);
         }
       `}</style>
-      <span id="when">
-        {duration > 0 ? "next" : "last"} event {duration.humanize(true)}
+      <span className="humanize">
+        ( {duration > 0 ? "next" : "last"} event {duration.humanize(true)} )
+
       </span>
       <span id="date">
         {}; {date.format('DD/MM ( HH:mm )')}
